@@ -3,8 +3,8 @@
 # make sure Expect scripting language works
 # otherwise :
 # apt-get install expect
-# make sure you have in the same folder the set-up file1.sh (provided in person)
-# modify the path where you want to store the new data within file1.sh
+# make sure you have in the same folder the set-up settings.sh (provided to you in person)
+# modify the path where you want to store the new data within settings.sh
 # execute the present scipt in terminal :  ./CCMP.upload_need_psw.sh
 # it will start recursif data download (ALL files)
 
@@ -12,7 +12,7 @@
 # log_user 0
 
 # set timeout -1 # Start COMMAND, and kill it if still running after DURATION.
-source file1.sh
+source settings.sh
 
 
 ## connect to ftp
