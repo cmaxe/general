@@ -1,22 +1,21 @@
 #!/usr/bin/expect
 
-# execute it as:  ./CCMP.upload.exp
-# téléchargement récursif (ALL)
-# CCMP_NOAA
-# see documentation:  /READ/satellite_ocean_winds.doc
-# https://www.ncdc.noaa.gov/data-access/marineocean-data/blended-global/blended-sea-winds
+# make sure Expect scripting language works
+# otherwise :
+# apt-get install expect
+# make sure you have in the same folder the set-up file1.sh (provided in person)
+# modify the path where you want to store the new data within file1.sh
+# execute the present scipt in terminal :  ./CCMP.upload_need_psw.sh
+# it will start recursif data download (ALL files)
+
 
 # log_user 0
 
 # set timeout -1 # Start COMMAND, and kill it if still running after DURATION.
 source file1.sh
 
-#if {[llength $argv] == 0} {
-#  eof { send_user "\n $DATA_PATH $HOST $USER $PASSWD\n" }
-#}
 
 ## connect to ftp
-
 spawn ftp
 expect "ftp>" {send "open eclipse.ncdc.noaa.gov \r"}
 sleep 1
