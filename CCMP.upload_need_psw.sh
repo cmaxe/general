@@ -8,10 +8,6 @@
 # execute the present scipt in terminal :  ./CCMP.upload_need_psw.sh
 # it will start recursif data download (ALL files)
 
-
-# log_user 0
-
-# set timeout -1 # Start COMMAND, and kill it if still running after DURATION.
 source settings.sh
 
 
@@ -36,12 +32,3 @@ expect "ftp>" {send "quit\r"}
 expect eof
 interact
 
-
-
-
-# Name (eclipse.ncdc.noaa.gov:emaksimovich): anonymous
-# 331 Anonymous login ok, send your complete email address as your password
-# Password:
-# 230 Anonymous access granted, restrictions apply
-# Remote system type is UNIX.
-# Using binary mode to transfer files.
